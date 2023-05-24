@@ -31,7 +31,7 @@ RSpec.describe Gradebook do
 
   it 'can list_all_students in its courses' do
     @gradebook.add_course(@course2)
-    expect(@gradebook.list_all_students).to eq {course1=> [@student1, @student2], course2=> []}
+    expect(@gradebook.list_all_students).to eq ({@course1=> [@student1, @student2], @course2=> []})
   end
 
   it 'can show all student below threshold' do
